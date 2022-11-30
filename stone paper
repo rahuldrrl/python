@@ -1,0 +1,43 @@
+while True:
+    print("Enter the values to perform the following operation")
+    print(" 1.to play again enter play    2.to quit enter quit ")
+    a=input()
+    if(a=="play"):
+        print("what do you want to choose ")
+        print("1.stone 2.paper 3.scissor")
+        array = ["stone","paper","scissor"]
+        b=input()
+        c=random.choice(array)
+        print("the option selected by computer  is   " + c)
+        if(b=="stone"):
+            if(c=="scissor"):
+                d=1
+            else:
+                d=0
+            if(c=="stone"):
+                d=2
+        elif(b=="paper"):
+            if(c=="stone"):
+                d=1
+            else:
+                d=0
+            if(c=="paper"):
+                d=2
+        elif(b=="stone"):
+            if(c=="scissor"):
+                d=1
+            else:
+                d=0
+            if(c=="stone"):
+                d=2
+        if d==1:
+            print("you win")
+            score=score+1
+        elif d==0:
+            print("you lose")
+        elif d==2:
+            print("drawwwwww")
+        print("your score is " + str(score))
+    if a=="quit":
+        break
+
